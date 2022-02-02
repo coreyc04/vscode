@@ -65,6 +65,7 @@ import 'vs/workbench/services/textmodelResolver/common/textModelResolverService'
 import 'vs/workbench/services/editor/browser/editorService';
 import 'vs/workbench/services/editor/browser/editorResolverService';
 import 'vs/workbench/services/history/browser/historyService';
+import 'vs/workbench/services/history/browser/historyService2';
 import 'vs/workbench/services/activity/browser/activityService';
 import 'vs/workbench/services/keybinding/browser/keybindingService';
 import 'vs/workbench/services/untitled/common/untitledTextEditorService';

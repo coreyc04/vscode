@@ -26,6 +26,7 @@ import { Codicon } from 'vs/base/common/codicons';
 import { IFilesConfigurationService, AutoSaveMode } from 'vs/workbench/services/filesConfiguration/common/filesConfigurationService';
 import { IEditorResolverService } from 'vs/workbench/services/editor/common/editorResolverService';
 import { isLinux, isNative, isWindows } from 'vs/base/common/platform';
+import { IHistoryService2 } from 'vs/workbench/services/history/common/history2';
 
 export class ExecuteCommandAction extends Action {
 
@@ -1321,13 +1322,13 @@ export class ReopenClosedEditorAction extends Action {
 	constructor(
 		id: string,
 		label: string,
-		@IHistoryService private readonly historyService: IHistoryService
+		@IHistoryService2 private readonly historyService2: IHistoryService2
 	) {
 		super(id, label);
 	}
 
 	override async run(): Promise<void> {
-		this.historyService.reopenLastClosedEditor();
+		this.historyService2.reopenLastClosedEditor();
 	}
 }
 
